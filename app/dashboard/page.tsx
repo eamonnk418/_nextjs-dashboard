@@ -1,14 +1,18 @@
-import { fetchCardData, fetchLatestInvoices } from "@/app/lib/data";
 import LatestInvoices from "@/app/ui/dashboard/latest-invoices";
 import RevenueChart from "@/app/ui/dashboard/revenue-chart";
 import { lusitana } from "@/app/ui/fonts";
-import CardWrapper, { Card } from "../ui/dashboard/cards";
+import { Metadata } from "next";
 import { Suspense } from "react";
+import CardWrapper from "../ui/dashboard/cards";
 import {
   CardSkeleton,
   LatestInvoicesSkeleton,
   RevenueChartSkeleton,
 } from "../ui/skeletons";
+
+export const metadata: Metadata = {
+  title: "Invoices | Acme dashboard",
+};
 
 export default async function Page() {
   return (
